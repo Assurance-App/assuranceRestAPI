@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "paiements",
+  "info": {
+    "name": "Paiement"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "offre": {
+      "model": "offre"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Waiting",
+        "Succeeded",
+        "Refused"
+      ]
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "Total": {
+      "type": "decimal"
+    }
+  }
+}

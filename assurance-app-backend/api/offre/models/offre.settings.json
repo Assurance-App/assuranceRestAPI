@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offres",
+  "info": {
+    "name": "offre"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "priceMonthly": {
+      "type": "decimal"
+    },
+    "imageUrl": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}

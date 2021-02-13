@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agences",
+  "info": {
+    "name": "Agence"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "address": {
+      "type": "json"
+    },
+    "GeoAddress": {
+      "type": "json"
+    }
+  }
+}
